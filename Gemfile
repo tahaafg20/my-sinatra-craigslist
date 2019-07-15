@@ -1,12 +1,12 @@
 # A sample Gemfile
 source "https://rubygems.org"
-
+ruby '2.6.3'
 gem 'sinatra'
 gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'rake'
 gem 'require_all'
-gem 'sqlite3'
+gem 'pg'
 gem 'shotgun'
 gem 'byebug'
 gem 'bcrypt'

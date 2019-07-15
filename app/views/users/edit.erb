@@ -1,0 +1,19 @@
+<form action="/users/<%=@post.id%>" method="POST">
+<input type="hidden" name="_method" value="PUT">
+      <fieldset>
+        <legend>To edit your form please fill up this form!</legend>
+        The Item or Service Name:<br>
+        <input type="text" name="post_name">
+        <br>
+        Description:<br>
+        <input type="text" name="description">
+        <br>
+        Location:<br>
+        <input type="text" name="location">
+        <br>
+        Payment:<br>
+        <input type="text" name="payment">
+        <br>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>

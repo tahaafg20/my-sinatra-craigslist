@@ -8,7 +8,6 @@ body {
   font-family: Cambria;
   font-size: 15px;
   letter-spacing: 2px;
-
 }
 h2, h3 {
   font-size: 20px;
@@ -93,3 +92,14 @@ form {
   text-align: right;
   float: right;
 }
+.row-centered {
+  text-align:center;
+  }
+  .col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+  }

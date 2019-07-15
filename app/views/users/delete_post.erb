@@ -1,0 +1,8 @@
+
+<h2>Delete Page</h2>
+  <p>Are you sure you want to delete the page called <%=@post.post_name%>?</p>
+  <form action="/users/<%=@post.id%>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete">
+  <a href="/users/<%=@post.id%>">Cancel</a>
+  </form>

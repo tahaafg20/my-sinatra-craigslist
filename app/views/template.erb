@@ -4,6 +4,14 @@
       <link rel="stylesheet" href="/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+      body {
+    text-align: center;
+    }
+    form {
+        display: inline-block;
+    }
+      </style>
     </head>
   <div class="topnav"> 
   <div><a href="/home">HOME</a></div>
@@ -14,21 +22,6 @@
     <h1>C R A I G S L I S T</h1>
   </div>
   <br><br>
-    <div style="margin-left:20%;">
-    <div class="index row">
-      
-      <%@categories.each do |cate|%>
-      <div class="column">
-        <h3><%=cate.name%></h3>
-        <hr>
-        <%subs=cate.subcategories.count%>
-        
-        <%subs.times do |n|%>
-        <ul>
-          <li><a href="/subcategories/subcategory_posts/<%=cate.subcategories[n].id%>"><%=cate.subcategories[n].name%></a></li>
-        </ul>
-        <%end%>
-      </div>
-      <%end%>
-
-
+      <%=yield%>
+      <body>
+</html>
