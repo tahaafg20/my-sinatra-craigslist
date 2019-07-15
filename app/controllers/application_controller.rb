@@ -13,12 +13,12 @@ class ApplicationController < Sinatra::Base
   # Renders the home or index page
   get '/' do
     @categories = Category.all
-    erb :home
+    erb :home, :layout => false
   end
 
   get '/home' do
     @categories = Category.all
-    erb :home
+    erb :home, :layout => false
   end
   # Renders the sign up/registration page in app/views/registrations/signup.erb
   get '/registrations/signup' do
@@ -61,7 +61,7 @@ class ApplicationController < Sinatra::Base
     if (session[:user_id])
       @user = User.find(session[:user_id])
       @categories = Category.all
-      erb :'/users/home'
+      erb :'/users/home', :layout => false
     else
       redirect "/sessions/login"
     end
